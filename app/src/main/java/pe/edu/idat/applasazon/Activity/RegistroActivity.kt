@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import pe.edu.idat.applasazon.R
 import pe.edu.idat.applasazon.databinding.ActivityRegistroBinding
+import androidx.appcompat.app.ActionBar;
 
 class RegistroActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
