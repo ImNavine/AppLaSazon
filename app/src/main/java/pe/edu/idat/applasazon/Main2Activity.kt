@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -61,6 +62,20 @@ class Main2Activity : AppCompatActivity() {
                 val intent = Intent(this, LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
+                true // Indica que manejaste el evento
+            }
+
+            R.id.action_recomendacion -> {
+                // Define el mensaje personalizado
+                val header = "Recomendación de Hoy"
+                val message = "Prueba nuestra causa rellena, a tan solo S/10.99"
+
+                // Crea un Toast personalizado
+                val toast = Toast.makeText(this, "$header  \n $message", Toast.LENGTH_LONG)
+
+                // Muestra el Toast
+                toast.show()
+
                 true // Indica que manejaste el evento
             }
 
