@@ -19,9 +19,17 @@
     <string name="valbtnregistro">Registrese Aquí</string>
     <string name="valbtnregistrarusuario">Registrar</string>
     <string name="valbtnvolverlogin">Volver al Login</string>
-    <string name="t">texto prueba</string>
     <string name="Encontrarnos">¡Ubicanos!</string>
     <string name="enter">Entrar \nGoogle Maps</string>
-    <string name="action_salir">Cerrar Sesión</string>
+    <string name="ct">¡Nos alegra que estes interesad@ en contactarnos\naqui te mostramos las maneras de como hacerlo!</string>
+    <string name="correop">CORREO\n</string>
+    <string name="D">Dominic\n</string>
+    <string name="K">Kevin</string>
+    <string name="r">Angelo</string>
+    <string name="action_salir">Salir\n</string>
     <string name="action_recomendacion">Recomendacion</string>
+    <string name="menu_contactenos">Contactenos</string>
+    <string name="sesion_iniciado">Sesion iniciada</string>
+    <string name="bienvenido">Bienvenida a La Sazon</string>
+    <string name="sesioniniciado">Sesion iniciada</string>
 </resources>
