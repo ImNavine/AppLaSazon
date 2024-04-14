@@ -20,4 +20,6 @@
     <string name="valbtnregistrarusuario">Registrar</string>
     <string name="valbtnvolverlogin">Volver al Login</string>
     <string name="t">texto prueba</string>
+    <string name="Encontrarnos">¡Ubicanos!</string>
+    <string name="enter">Entrar \nGoogle Maps</string>
 </resources>
