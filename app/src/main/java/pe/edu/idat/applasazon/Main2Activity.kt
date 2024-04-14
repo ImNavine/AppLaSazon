@@ -1,7 +1,10 @@
 package pe.edu.idat.applasazon
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -11,6 +14,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import pe.edu.idat.applasazon.Activity.LoginActivity
 import pe.edu.idat.applasazon.databinding.ActivityMain2Binding
 
 class Main2Activity : AppCompatActivity() {
@@ -45,6 +50,44 @@ class Main2Activity : AppCompatActivity() {
         menuInflater.inflate(R.menu.main2, menu)
         return true
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_salir -> {
+                // Lógica para cerrar sesión
+                FirebaseAuth.getInstance().signOut() // Cerrar sesión
+
+                // Redirigir al usuario a la actividad de inicio de sesión
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                true // Indica que manejaste el evento
+            }
+
+            R.id.action_recomendacion -> {
+                val header = "Recomendación de Hoy"
+                // Lista de Mensajes
+                val recomendaciones = listOf(
+                    "Prueba nuestra causa rellena, a tan solo S/10.99",
+                    "Disfruta de nuestro ceviche de pescado, a tan solo S/15.99",
+                    "Prueba nuestra deliciosa sopa criolla, a solo S/12.99",
+                    "Disfruta de nuestro lomo saltado, a tan solo S/20.99",
+                    "Prueba nuestra tarta de chocolate, a tan solo S/8.99"
+                )
+                val randomMessage = recomendaciones.random()
+
+                val toast = Toast.makeText(this, "$header  \n $randomMessage", Toast.LENGTH_LONG)
+
+                // Muestra el Toast
+                toast.show()
+
+                true // Indica que manejaste el evento
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main2)
