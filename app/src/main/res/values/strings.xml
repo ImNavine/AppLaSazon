@@ -21,7 +21,7 @@
     <string name="valbtnvolverlogin">Volver al Login</string>
     <string name="Encontrarnos">¡Ubicanos!</string>
     <string name="enter">Entrar \nGoogle Maps</string>
-    <string name="ct">¡Nos alegra que estes interesad@ en contactarnos\naqui te mostramos las maneras de como hacerlo!</string>
+    <string name="ct">¡Nos alegra que estes interesad@ en contactarnos\aqui te mostramos las maneras de como hacerlo!</string>
     <string name="correop">CORREO\n</string>
     <string name="D">Dominic\n</string>
     <string name="K">Kevin</string>
@@ -32,4 +32,6 @@
     <string name="sesion_iniciado">Sesion iniciada</string>
     <string name="bienvenido">Bienvenida a La Sazon</string>
     <string name="sesioniniciado">Sesion iniciada</string>
+    <string name="menu_portada">Portada</string>
+    <string name="tituport">Les damos la bienvenida a "La Sazon"</string>
 </resources>
