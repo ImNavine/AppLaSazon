@@ -14,8 +14,8 @@
             android:title="@string/Encontrarnos" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:icon="@android:drawable/ic_menu_call"
+            android:title="@string/menu_contactenos" />
         <item
             android:id="@+id/comidaListFragment"
             android:icon="@android:drawable/btn_star_big_on"

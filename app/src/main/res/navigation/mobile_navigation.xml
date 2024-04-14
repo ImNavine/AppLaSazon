@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="pe.edu.idat.applasazon.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_contactenos"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/comidaListFragment"
