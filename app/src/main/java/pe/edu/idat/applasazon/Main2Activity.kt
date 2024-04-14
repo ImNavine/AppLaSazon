@@ -51,7 +51,6 @@ class Main2Activity : AppCompatActivity() {
         return true
     }
 
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_salir -> {
@@ -66,12 +65,18 @@ class Main2Activity : AppCompatActivity() {
             }
 
             R.id.action_recomendacion -> {
-                // Define el mensaje personalizado
                 val header = "Recomendación de Hoy"
-                val message = "Prueba nuestra causa rellena, a tan solo S/10.99"
+                // Lista de Mensajes
+                val recomendaciones = listOf(
+                    "Prueba nuestra causa rellena, a tan solo S/10.99",
+                    "Disfruta de nuestro ceviche de pescado, a tan solo S/15.99",
+                    "Prueba nuestra deliciosa sopa criolla, a solo S/12.99",
+                    "Disfruta de nuestro lomo saltado, a tan solo S/20.99",
+                    "Prueba nuestra tarta de chocolate, a tan solo S/8.99"
+                )
+                val randomMessage = recomendaciones.random()
 
-                // Crea un Toast personalizado
-                val toast = Toast.makeText(this, "$header  \n $message", Toast.LENGTH_LONG)
+                val toast = Toast.makeText(this, "$header  \n $randomMessage", Toast.LENGTH_LONG)
 
                 // Muestra el Toast
                 toast.show()
