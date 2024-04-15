@@ -57,11 +57,10 @@ class Main2Activity : AppCompatActivity() {
                 // Lógica para cerrar sesión
                 FirebaseAuth.getInstance().signOut() // Cerrar sesión
 
-                // Redirigir al usuario a la actividad de inicio de sesión
                 val intent = Intent(this, LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
-                true // Indica que manejaste el evento
+                true
             }
 
             R.id.action_recomendacion -> {
@@ -69,19 +68,15 @@ class Main2Activity : AppCompatActivity() {
                 // Lista de Mensajes
                 val recomendaciones = listOf(
                     "Prueba nuestra causa rellena, a tan solo S/10.99",
-                    "Disfruta de nuestro ceviche de pescado, a tan solo S/15.99",
-                    "Prueba nuestra deliciosa sopa criolla, a solo S/12.99",
-                    "Disfruta de nuestro lomo saltado, a tan solo S/20.99",
-                    "Prueba nuestra tarta de chocolate, a tan solo S/8.99"
+                    "Disfruta de nuestro ceviche, a tan solo S/14.99",
+                    "Prueba nuestra deliciosa sopa de tomate, a solo S/6.00",
+                    "Disfruta de nuestro lomo saltado, a tan solo S/16.99"
                 )
                 val randomMessage = recomendaciones.random()
 
-                val toast = Toast.makeText(this, "$header  \n $randomMessage", Toast.LENGTH_LONG)
-
-                // Muestra el Toast
+                val toast = Toast.makeText(this, "$header  \n $randomMessage", Toast.LENGTH_SHORT)
                 toast.show()
-
-                true // Indica que manejaste el evento
+                true
             }
 
             else -> super.onOptionsItemSelected(item)
